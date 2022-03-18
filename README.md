@@ -6,6 +6,7 @@ The main goal was to improve the LocalMaxs extractor, which retrieves Relevant E
 In the end, the precision score increased from 70% to roughly 85%, and the extractor is now able to retrieve single words, which it couldn't previouly.
 
 To achieve this, I implemented a method that can spot stopwords without semantic assistance. Words that present a very high number of distinct neighbours (words on their left and right) are typically connectors, and convey no useful meaning. This method to extract stopwords showed to be 100% precise, only extracting irrelevant terms!
+
 ![neighboursline](https://user-images.githubusercontent.com/48351481/159038560-2633c058-5ecc-40c6-b246-b15ae466e20e.png)
 
 This was tested using Portuguese, English and German corpura, and the language indepence was confirmed, meaning that these patterns occurs, regardless of the language.
